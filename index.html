@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Manipulación del DOM</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Interacciones</h2>
+            <div class="buttons">
+                <!-- Estilos -->
+                <button id="btnCircle">Cambiar a círculo</button>
+                <button id="btnStar">Cambiar a estrella</button>
+                <button id="btnGif">Poner fondo GIF</button>
+                <button id="btnAnim">Agregar animación</button>
+                <button id="btnMoveUp">Mover arriba</button>
+                <button id="btnMoveDown">Mover abajo</button>
+                <button id="btnMoveLeft">Mover izquierda</button>
+                <button id="btnMoveRight">Mover derecha</button>
+
+                <!-- Contenidos -->
+                <button id="btnChangeTitle">Cambiar título (prompt)</button>
+                <button id="btnChangeParagraph">Cambiar párrafo (prompt)</button>
+                <button id="btnAddParagraph">Agregar un párrafo</button>
+                <button id="btnRemoveParagraph">Eliminar último párrafo</button>
+
+                <!-- Atributos -->
+                <button id="btnHexColor">Color en HEX (prompt)</button>
+                <button id="btnChooseFigure">Elegir figura (prompt)</button>
+                <button id="btnChangeImageNext">Cambiar imagen (siguiente)</button>
+                <button id="btnChangeImagePrev">Cambiar imagen (Atras)</button>
+
+                <button id="btnToggleImage">Mostrar/Ocultar imagen</button>
+                <button id="btnChangeAlt">Cambiar atributo ALT</button>
+                <button id="btnChangeLink">Cambiar enlace (prompt)</button>
+                <button id="btnOpenLink">Abrir enlace en nueva pestaña</button>
+                <button id="btnDisableLink">Deshabilitar enlace</button>
+            </div>
+        </div>
+
+        <div class="right">
+
+            <h2>FIGURA</h2>
+            <div class="box" id="figure"></div>
+
+            <hr>
+
+            <div class="texts">
+                <h1 id="mainTitle">Título inicial</h1>
+                <p id="mainParagraph">Este es un párrafo de ejemplo para manipular desde JavaScript.</p>
+                <div id="extraParagraphs"></div>
+            </div>
+
+            <div class="media">
+                <img id="mainImage" src="img/imagen.jpg" alt="Imagen de ejemplo" width="350px">
+                <p>
+                    <a id="mainLink" href="https://www.example.com" target="_blank">Visitar enlace de ejemplo</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

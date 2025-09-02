@@ -1,0 +1,102 @@
+/* Reset sencillo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  min-height: 92vh;
+}
+
+/* Columna izquierda */
+.left {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.left h2,
+.right h2 {
+  padding: 20px;
+  color: #013889;
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  background: #013889;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 160px;
+  margin: 16px;
+  border: 2px solid #013889;
+
+}
+
+button:hover {
+  background: #fff;
+  color: #013889;
+  border: 2px solid #013889;
+  border-radius: 0;
+  transform: scale(1.1);
+}
+
+/* Columna derecha */
+.right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+}
+
+/* Figura base */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #013889;
+  margin: 0 auto;
+  border-radius: 0;
+  transition: all 0.5s ease;
+  margin-top: 20px;
+}
+
+hr{
+    margin: 40px 0;
+}
+
+img{
+    margin-top: 30px;
+}
+
+#mainLink{
+    margin-top: 20px;
+    display: block;
+}
