@@ -49,6 +49,30 @@ function titulo(){
     mainTitle.textContent = nuevoTitulo; 
   }
 }
+function parrfo(){
+    const parafo = document.getElementById("mainParagraph");
+    const nuevoParafo = prompt("Escribe el nuevo parrafo:");
+
+  if (nuevoParafo) { 
+    parafo.textContent = nuevoParafo; 
+  }
+}
+function agregar(){
+    const parafoNue = document.getElementById("extraParagraphs");
+    const parafo = prompt("Agrega el nuevo parrafo:");
+
+  if (parafo) { 
+    parafoNue.textContent = parafo; 
+  }
+}
+function eliminar() {
+  const extra = document.getElementById("extraParagraphs");
+  if (extra.lastChild) {
+    extra.removeChild(extra.lastChild);
+  } else {
+    alert("No hay párrafos para eliminar.");
+  }
+}
 
 
 
@@ -65,4 +89,11 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("btnMoveRight").addEventListener('click', derecha)
     // desde aca son los otros
     document.getElementById("btnChangeTitle").addEventListener('click', titulo)
+    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
+    document.getElementById("btnAddParagraph").addEventListener('click', agregar)
+    document.getElementById("btnRemoveParagraph").addEventListener('click', eliminar)
+
+    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
+    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
+    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
 })
