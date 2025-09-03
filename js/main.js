@@ -38,6 +38,17 @@ function derecha(){
     figure.classList.add("derecha")
     figure.style.background= "#1cca56ff"
 }
+// desde aca empieso con lo que son las partes del texto de la segunda casilla
+const mainTitle = document.getElementById("mainTitle");
+
+function titulo(){
+    const mainTitle = document.getElementById("mainTitle");
+    const nuevoTitulo = prompt("Escribe el nuevo título:");
+
+  if (nuevoTitulo) { 
+    mainTitle.textContent = nuevoTitulo; 
+  }
+}
 
 
 
@@ -52,4 +63,6 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("btnMoveDown").addEventListener('click', abajo)
     document.getElementById("btnMoveLeft").addEventListener('click', izquierda)
     document.getElementById("btnMoveRight").addEventListener('click', derecha)
+    // desde aca son los otros
+    document.getElementById("btnChangeTitle").addEventListener('click', titulo)
 })
