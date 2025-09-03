@@ -24,6 +24,15 @@ function animacion(){
 function ariba(){
     figure.classList.add("ariba")
 }
+function abajo(){
+    figure.classList.add("abajo")
+}
+function izquierda(){
+    figure.classList.add("izquierda")
+}
+function derecha(){
+    figure.classList.add("derecha")
+}
 
 
 // Eventos
