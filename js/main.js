@@ -20,19 +20,25 @@ function gif(){
 }
 function animacion(){
     figure.classList.add("giro");
+    figure.style.background= "#ce7979ff"
 }
 function ariba(){
     figure.classList.add("ariba")
+    figure.style.background= "#992525ff"
 }
 function abajo(){
     figure.classList.add("abajo")
+    figure.style.background= "#407ab1ff"
 }
 function izquierda(){
     figure.classList.add("izquierda")
+    figure.style.background= "#35dadaff"
 }
 function derecha(){
     figure.classList.add("derecha")
+    figure.style.background= "#1cca56ff"
 }
+
 
 
 // Eventos

@@ -1,105 +1,146 @@
-/* Reset sencillo */
+/* ===== Reset general ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
-  padding: 20px;
+  background: #0f1115;
+  color: #f5f5f5;
+  line-height: 1.6;
 }
 
+/* ===== Layout ===== */
 .container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
-  min-height: 92vh;
+  min-height: 100vh;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-/* Columna izquierda */
+/* ===== Panel izquierdo ===== */
 .left {
   flex: 1;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  background: #1b1e25;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+
+.left h2 {
+  margin-bottom: 1rem;
+  color: #9da5b4;
+  font-size: 1.3rem;
   text-align: center;
 }
-
-.left h2,
-.right h2 {
-  padding: 20px;
-  color: #013889;
-  font-size: 30px;
-}
-
+/* ===== Contenedor de botones ===== */
 .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 0.8rem;
 }
 
+/* Botones */
 button {
-  padding: 14px 20px;
+  padding: 0.8rem;
   border: none;
-  background: #013889;
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  min-width: 160px;
-  margin: 16px;
-  border: 2px solid #013889;
-
-}
-
-button:hover {
-  background: #fff;
-  color: #013889;
-  border: 2px solid #013889;
-  border-radius: 0;
-  transform: scale(1.1);
-}
-
-/* Columna derecha */
-.right {
-  flex: 1;
-  background: #fff;
-  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  background: #2a2f3a;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+/* Hover con brillo */
+button:hover {
+  background: #3a4050;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(111, 168, 255, 0.6); /* efecto glow */
+}
+
+/* Activo */
+button:active {
+  transform: scale(0.95);
+  background: #4f5668;
+  box-shadow: 0 0 5px rgba(111, 168, 255, 0.3);
+}
+
+
+/* ===== Panel derecho ===== */
+.right {
+  flex: 2;
+  background: #1b1e25;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .right h2 {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  color: #9da5b4;
+  font-size: 1.3rem;
 }
 
-/* Figura base */
+/* Caja de figura */
 .box {
   width: 200px;
   height: 200px;
-  background-color: #013889;
-  margin: 0 auto;
-  border-radius: 0;
-  transition: all 0.5s ease;
-  margin-top: 20px;
+  background: #2a2f3a;
+  border-radius: 12px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-hr{
-    margin: 40px 0;
+/* Textos */
+.texts {
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-img{
-    margin-top: 30px;
+.texts h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
 }
 
-#mainLink{
-    margin-top: 20px;
-    display: block;
+.texts p {
+  font-size: 1rem;
+  color: #c0c4cc;
 }
+
+/* Media */
+.media {
+  text-align: center;
+}
+
+.media img {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+  margin-bottom: 0.8rem;
+}
+
+.media a {
+  color: #6fa8ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.media a:hover {
+  color: #a7c9ff;
+  text-decoration: underline;
+}
+
 #figure {
   transition: all 0.5s ease;
 }
