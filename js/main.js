@@ -18,6 +18,12 @@ function gif(){
     figure.style.backgroundSize = "cover"; 
     figure.style.backgroundPosition = "center";
 }
+function animacion(){
+    figure.classList.add("giro");
+}
+function ariba(){
+    figure.classList.add("ariba")
+}
 
 
 // Eventos
@@ -26,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function(){
     document.getElementById("btnCircle").addEventListener('click', circulo)
     document.getElementById("btnStar").addEventListener('click', estrella)
     document.getElementById("btnGif").addEventListener('click', gif)
-    
-
+    document.getElementById("btnAnim").addEventListener('click', animacion)
+    document.getElementById("btnMoveUp").addEventListener('click', ariba)
+    document.getElementById("btnMoveDown").addEventListener('click', abajo)
+    document.getElementById("btnMoveLeft").addEventListener('click', izquierda)
+    document.getElementById("btnMoveRight").addEventListener('click', derecha)
 })
