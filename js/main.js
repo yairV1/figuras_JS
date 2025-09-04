@@ -84,11 +84,13 @@ function color(){
   }
 }
 function elejir(){
-    const figura = document.getElementById("figure");
-     const opcion = prompt("Escribe una figura: circulo, estrella");
+    
+    const opcion = prompt("Escribe una figura: circulo, estrella");
+
     switch (opcion) {
         case "circulo":
                 figure.style.borderRadius = "50%";
+                figure.style.clipPath ="none";
             break;
         
         case "estrella":
@@ -99,6 +101,7 @@ function elejir(){
 
         case "cuadrado":
             figure.style.borderRadius = "0%"
+            figure.style.clipPath ="none";
             break;
 
         default:
