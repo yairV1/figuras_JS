@@ -66,12 +66,112 @@ function agregar(){
   }
 }
 function eliminar() {
-  const extra = document.getElementById("extraParagraphs");
-  if (extra.lastChild) {
-    extra.removeChild(extra.lastChild);
+  const elimina = document.getElementById("extraParagraphs");
+  if (elimina.lastChild) {
+    elimina.removeChild(elimina.lastChild);
   } else {
     alert("No hay párrafos para eliminar.");
   }
+}
+// desde aca empiezo con los atributos 
+function color(){
+    const colore = document.getElementById("figure");
+    const color = prompt("Agrega el nuevo Color:");
+
+  if (color) { 
+    colore.textContent = color; 
+    colore.style.backgroundColor= color;
+  }
+}
+function elejir(){
+    const figura = document.getElementById("figure");
+     const opcion = prompt("Escribe una figura: circulo, estrella");
+    switch (opcion) {
+        case "circulo":
+                figure.style.borderRadius = "50%";
+            break;
+        
+        case "estrella":
+
+            figure.style.clipPath =
+            "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)";
+            break;
+
+        case "cuadrado":
+            figure.style.borderRadius = "0%"
+            break;
+
+        default:
+            break;
+
+    }
+
+}
+// Lista de imágenes
+let imagenes = [
+  "img/imagen.jpg",
+  "img/imagen2.jpg",
+  "img/imagen3.jpg"
+];
+
+let imgPrimera = 0; // índice de la imagen actual
+
+// Referencia a la imagen
+const mainImage = document.getElementById("mainImage");
+
+// Cambiar a la siguiente imagen
+function sigiente() {
+  imgPrimera++;
+  if (imgPrimera >= imagenes.length) {
+    imgPrimera = 0;
+  }
+  mainImage.src = imagenes[imgPrimera];
+}
+
+// Cambiar a la anterior imagen
+function anterior() {
+  imgPrimera--;
+  if (imgPrimera < 0) {
+    imgPrimera = imagenes.length - 1;
+  }
+  mainImage.src = imagenes[imgPrimera];
+}
+
+
+
+function mostrar() {
+    const mainImage = document.getElementById("mainImage");
+
+  if (mainImage.style.display === "none") {
+    mainImage.style.display = "block";
+  } else {
+    mainImage.style.display = "none";
+  }
+}
+
+function atributo() {
+  const atributo = prompt("Escribe un nuevo texto para el ALT de la imagen:");
+  if (atributo) {
+    document.getElementById("mainImage").setAttribute("alt", atributo);
+  }
+}
+
+function enlace() {
+  const nuevo = prompt("Escribe la nueva URL para el enlace:");
+  if (nuevo) {
+    document.getElementById("mainLink").setAttribute("href", nuevo);
+  }
+}
+
+function pestana() {
+  const enlace = document.getElementById("mainLink");
+  enlace.setAttribute("href", "https://github.com/yairV1");
+  enlace.setAttribute("target", "_blank");
+}
+
+
+function desabilitar() {
+  document.getElementById("mainLink").removeAttribute("href");
 }
 
 
@@ -90,10 +190,18 @@ document.addEventListener('DOMContentLoaded', function(){
     // desde aca son los otros
     document.getElementById("btnChangeTitle").addEventListener('click', titulo)
     document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
+
     document.getElementById("btnAddParagraph").addEventListener('click', agregar)
     document.getElementById("btnRemoveParagraph").addEventListener('click', eliminar)
 
-    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
-    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
-    document.getElementById("btnChangeParagraph").addEventListener('click', parrfo)
+    document.getElementById("btnHexColor").addEventListener('click', color)
+    document.getElementById("btnChooseFigure").addEventListener('click', elejir)
+    document.getElementById("btnChangeImageNext").addEventListener('click', sigiente)
+    document.getElementById("btnChangeImagePrev").addEventListener('click', anterior)
+
+    document.getElementById("btnToggleImage").addEventListener('click', mostrar)
+    document.getElementById("btnChangeAlt").addEventListener('click', atributo)
+    document.getElementById("btnChangeLink").addEventListener('click', enlace)
+    document.getElementById("btnOpenLink").addEventListener('click', pestana)
+    document.getElementById("btnDisableLink").addEventListener('click', desabilitar)
 })
